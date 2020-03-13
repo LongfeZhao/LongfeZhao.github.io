@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="数据结构,C,编程," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="请参考《数据结构题集（C语言版）》严慧敏版  2.11123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869typedef int Status;typedef int ElemType;typ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构课后作业">
+<meta property="og:url" content="https://longfezhao.github.io/2019/09/28/chp1%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/index.html">
+<meta property="og:site_name" content="LongFeZhao&#39;s Blog">
+<meta property="og:description" content="请参考《数据结构题集（C语言版）》严慧敏版  2.11123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869typedef int Status;typedef int ElemType;typ">
+<meta property="article:published_time" content="2019-09-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-03-07T15:30:27.731Z">
+<meta property="article:author" content="LonngFeZhao">
+<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="C">
+<meta property="article:tag" content="编程">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://longfezhao.github.io/2019/09/28/chp1课后作业/"/>
+
+
+
+
+
+  <title>数据结构课后作业 | LongFeZhao's Blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">LongFeZhao's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Someone with nothing to say writing for someone with nothing to do.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://longfezhao.github.io/2019/09/28/chp1%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LonngFeZhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LongFeZhao's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数据结构课后作业</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-28T00:00:00+08:00">
+                2019-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>请参考《数据结构题集（C语言版）》严慧敏版</p>
+</blockquote>
+<h3 id="2-11"><a href="#2-11" class="headerlink" title="2.11"></a>2.11</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	ElemType *elem;</span><br><span class="line">	<span class="keyword">int</span> length;</span><br><span class="line">	<span class="keyword">int</span> listsize;</span><br><span class="line">&#125; SqList;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">InitList_Sq</span><span class="params">(SqList &amp;L)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//构造一个空线性表</span></span><br><span class="line">	L.elem = (ElemType*)<span class="built_in">malloc</span>(LIST_INIT_SIZE * <span class="keyword">sizeof</span>(ElemType));</span><br><span class="line">	<span class="keyword">if</span> (!L.elem) <span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">	L.length = <span class="number">0</span>;</span><br><span class="line">	L.listsize = LIST_INIT_SIZE;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">ListInsert_Sq</span><span class="params">(SqList &amp;L, <span class="keyword">int</span> i, ElemType e)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//在顺序线性表L中的第i个位置之前插入新的元素e</span></span><br><span class="line">	<span class="keyword">if</span> (i &lt; <span class="number">1</span> || i &gt; L.length + <span class="number">1</span>) <span class="keyword">return</span> ERROR;</span><br><span class="line">	<span class="keyword">if</span> (L.length &gt; L.listsize) &#123;</span><br><span class="line">		ElemType *newbase = (ElemType*) <span class="built_in">realloc</span>(L.elem, (L.listsize + LISTINCREMENT) * <span class="keyword">sizeof</span> (ElemType));</span><br><span class="line">		<span class="keyword">if</span> (!newbase) <span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">		L.elem = newbase;</span><br><span class="line">		L.listsize += LISTINCREMENT;</span><br><span class="line">	&#125;</span><br><span class="line">	ElemType *q = &amp;(L.elem[i - <span class="number">1</span>]);</span><br><span class="line">	<span class="keyword">for</span> (ElemType *p = &amp;(L.elem[L.length - <span class="number">1</span>]); p &gt;= q; --p)</span><br><span class="line">		*(p + <span class="number">1</span>) = *p;</span><br><span class="line">	*q = e;</span><br><span class="line">	L.length++;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">InsertOrderList</span><span class="params">(SqList &amp;L, ElemType x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (L.length == L.listsize) &#123;</span><br><span class="line">		<span class="keyword">return</span> OVERFLOW;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">int</span> i = L.length - <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (; i &gt;= <span class="number">0</span> &amp;&amp; x &lt; L.elem[i]; i--);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = L.length - <span class="number">1</span>; j &gt;= i + <span class="number">1</span>; j--) &#123;</span><br><span class="line">			L.elem[j + <span class="number">1</span>] = L.elem[j];</span><br><span class="line">		&#125;</span><br><span class="line">		L.elem[i + <span class="number">1</span>] = x;</span><br><span class="line">		L.length++;</span><br><span class="line">		<span class="keyword">return</span> OK;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ShowSqList</span><span class="params">(SqList L)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">putchar</span>(<span class="string">'['</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; L.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d,"</span>, *(L.elem + i));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d]\n"</span>, *(L.elem + L.length - <span class="number">1</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	SqList l;</span><br><span class="line">	InitList_Sq(l);</span><br><span class="line">	ListInsert_Sq(l, <span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">	ListInsert_Sq(l, <span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">	ListInsert_Sq(l, <span class="number">3</span>, <span class="number">4</span>);</span><br><span class="line">	ShowSqList(l);</span><br><span class="line">	InsertOrderList(l, <span class="number">3</span>);</span><br><span class="line">	ShowSqList(l);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-14"><a href="#2-14" class="headerlink" title="2.14"></a>2.14</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFEASIBLE -1 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">    ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125; *LinkList;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">CreateLinkList</span><span class="params">(LinkList &amp;L, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    LinkList head = (LinkList)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkList));</span><br><span class="line">    LinkList end;</span><br><span class="line">    <span class="keyword">if</span> (!head) <span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">    end = head;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        node* p = (node*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(node));</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;p-&gt;data);</span><br><span class="line">        end-&gt;next = p;</span><br><span class="line">        end = p;</span><br><span class="line">    &#125;</span><br><span class="line">    end-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    L = head;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Length</span><span class="params">(LinkList L)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> length = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (L-&gt;next != <span class="literal">NULL</span>) &#123;</span><br><span class="line">        L = L-&gt;next;</span><br><span class="line">        length++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> length;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Show</span><span class="params">(LinkList L)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (L-&gt;next != <span class="literal">NULL</span>) &#123;</span><br><span class="line">        L = L-&gt;next;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, L-&gt;data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    LinkList L;</span><br><span class="line">    <span class="keyword">int</span> n = <span class="number">5</span>;</span><br><span class="line">    CreateLinkList(L, <span class="number">5</span>);</span><br><span class="line">    Show(L);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, Length(L));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-19"><a href="#2-19" class="headerlink" title="2.19"></a>2.19</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFEASIBLE -1 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">    ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125; *LinkList;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">CreateLinkList</span><span class="params">(LinkList &amp;L, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    LinkList head = (LinkList)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkList));</span><br><span class="line">    LinkList end;</span><br><span class="line">    <span class="keyword">if</span> (!head) <span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">    end = head;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        node* p = (node*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(node));</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;p-&gt;data);</span><br><span class="line">        end-&gt;next = p;</span><br><span class="line">        end = p;</span><br><span class="line">    &#125;</span><br><span class="line">    end-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    L = head;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">Delete</span><span class="params">(LinkList &amp;L, ElemType mink, ElemType maxk)</span> </span>&#123;</span><br><span class="line">    node *p, *p1 = L;</span><br><span class="line">    <span class="keyword">while</span> (p1-&gt;next != <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (p1-&gt;next-&gt;data &gt; mink &amp;&amp; p1-&gt;next-&gt;data &lt; maxk) &#123;</span><br><span class="line">            p = p1-&gt;next;</span><br><span class="line">            p1-&gt;next = p1-&gt;next-&gt;next;</span><br><span class="line">            <span class="built_in">free</span>(p);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> p1 = p1-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Show</span><span class="params">(LinkList L)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (L-&gt;next != <span class="literal">NULL</span>) &#123;</span><br><span class="line">        L = L-&gt;next;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, L-&gt;data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkList L;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    CreateLinkList(L, n);</span><br><span class="line">    Show(L);</span><br><span class="line">    Delete(L, <span class="number">2</span>, <span class="number">5</span>);</span><br><span class="line">    Show(L);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="倒置链表"><a href="#倒置链表" class="headerlink" title="倒置链表"></a>倒置链表</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFEASIBLE -1 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemType;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">node</span> &#123;</span></span><br><span class="line">    ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125; *LinkList;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">CreateLinkList</span><span class="params">(LinkList &amp;L, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    LinkList head = (LinkList)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkList));</span><br><span class="line">    LinkList end;</span><br><span class="line">    <span class="keyword">if</span> (!head) <span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">    end = head;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        node* p = (node*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(node));</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;p-&gt;data);</span><br><span class="line">        end-&gt;next = p;</span><br><span class="line">        end = p;</span><br><span class="line">    &#125;</span><br><span class="line">    end-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    L = head;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">ReverseLinkList</span><span class="params">(LinkList &amp;L)</span> </span>&#123; </span><br><span class="line">    <span class="keyword">if</span> (L == <span class="literal">NULL</span> || L-&gt;next == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> OK;</span><br><span class="line">    node *prev = L;</span><br><span class="line">    node *cur = L-&gt;next;</span><br><span class="line">    node *tmp = L-&gt;next-&gt;next;</span><br><span class="line">    <span class="keyword">while</span> (tmp) &#123;</span><br><span class="line">        tmp = cur-&gt;next;</span><br><span class="line">        cur-&gt;next = prev;</span><br><span class="line">        prev = cur;</span><br><span class="line">        cur = tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    L-&gt;next-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    L-&gt;next = prev;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Show</span><span class="params">(LinkList L)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (L-&gt;next != <span class="literal">NULL</span>) &#123;</span><br><span class="line">        L = L-&gt;next;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, L-&gt;data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    LinkList L;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    CreateLinkList(L, n);</span><br><span class="line">    Show(L);</span><br><span class="line">    ReverseLinkList(L);</span><br><span class="line">    Show(L);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 数据结构</a>
+          
+            <a href="/tags/C/" rel="tag"># C</a>
+          
+            <a href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag"># 编程</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/22/%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E9%A2%98(Easy_Problem_from_Rujia_Liu?UVa_11991)/" rel="next" title="一道简单题">
+                <i class="fa fa-chevron-left"></i> 一道简单题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/29/%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC/" rel="prev" title="表达式求值">
+                表达式求值 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">LonngFeZhao</p>
+              <p class="site-description motion-element" itemprop="description">Shares and Studying</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-11"><span class="nav-number">1.</span> <span class="nav-text">2.11</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-14"><span class="nav-number">2.</span> <span class="nav-text">2.14</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-19"><span class="nav-number">3.</span> <span class="nav-text">2.19</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#倒置链表"><span class="nav-number">4.</span> <span class="nav-text">倒置链表</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LonngFeZhao</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+
+  <script type="text/javascript" color="0,0,0" opacity='0.5' zIndex="-1" count="150" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>
