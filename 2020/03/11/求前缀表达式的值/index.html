@@ -77,6 +77,9 @@
 
 
 
+  <meta property="fb:admins" content="fffzlfk" />
+  <meta property="fb:app_id" content="660712791411997" />
+
 
 
 <meta name="description" content="问题描述算术表达式有前缀表示法、中缀表示法和后缀表示法等形式。前缀表达式指二元运算符位于两个运算数之前，例如2+3*(7-4)+8&#x2F;4的前缀表达式是：+ + 2 * 3 - 7 4 &#x2F; 8 4。请设计程序计算前缀表达式的结果值。 输入格式:输入在一行内给出不超过30个字符的前缀表达式，只包含+、-、*、&#x2F;以及运算数，不同对象（运算数、运算符号）之间以空格分隔。 输出格式:输出前缀表达式的运算结果，">
@@ -127,6 +130,24 @@
 
   <title>求前缀表达式的值 | LongFeZhao's Blog</title>
   
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '660712791411997',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/zh_Hans/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 
 
 
@@ -335,8 +356,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2020/03/11/%E6%B1%82%E5%89%8D%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%80%BC/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2020/03/11/求前缀表达式的值/" itemprop="commentCount"></span>
+                  <span class="post-comments-count fb-comments-count" data-href="https://longfezhao.github.io/2020/03/11/%E6%B1%82%E5%89%8D%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%80%BC/" itemprop="commentCount">0</span> comments
                 </a>
               </span>
             
@@ -434,6 +454,24 @@
 
       
       
+        <div class="post-widgets">
+        
+
+        
+          <div class="social-like">
+            
+
+            
+              <div class="fb_like">
+                <div class="fb-like" data-layout="button_count" data-share="true"></div>
+              </div>
+            
+          </div>
+        
+
+        
+        </div>
+      
       
 
       
@@ -479,11 +517,11 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
-        </noscript>
+      <div class="fb-comments"
+           data-href="https://longfezhao.github.io/2020/03/11/%E6%B1%82%E5%89%8D%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%80%BC/"
+           data-numposts="10"
+           data-width="100%"
+           data-colorscheme="light">
       </div>
     </div>
 

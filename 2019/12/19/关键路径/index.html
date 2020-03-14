@@ -77,6 +77,9 @@
 
 
 
+  <meta property="fb:admins" content="fffzlfk" />
+  <meta property="fb:app_id" content="660712791411997" />
+
 
 
 <meta name="description" content="问题描述假定一个工程项目由一组子任务构成，子任务之间有的可以并行执行，有的必须在完成了其它一些子任务后才能执行。“任务调度”包括一组子任务、以及每个子任务可以执行所依赖的子任务集。 比如完成一个专业的所有课程学习和毕业设计可以看成一个本科生要完成的一项工程，各门课程可以看成是子任务。有些课程可以同时开设，比如英语和C程序设计，它们没有必须先修哪门的约束；有些课程则不可以同时开设，因为它们有先后的依">
@@ -131,6 +134,24 @@
 
   <title>关键活动 | LongFeZhao's Blog</title>
   
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '660712791411997',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/zh_Hans/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 
 
 
@@ -339,8 +360,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2019/12/19/%E5%85%B3%E9%94%AE%E8%B7%AF%E5%BE%84/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2019/12/19/关键路径/" itemprop="commentCount"></span>
+                  <span class="post-comments-count fb-comments-count" data-href="https://longfezhao.github.io/2019/12/19/%E5%85%B3%E9%94%AE%E8%B7%AF%E5%BE%84/" itemprop="commentCount">0</span> comments
                 </a>
               </span>
             
@@ -448,6 +468,24 @@
 
       
       
+        <div class="post-widgets">
+        
+
+        
+          <div class="social-like">
+            
+
+            
+              <div class="fb_like">
+                <div class="fb-like" data-layout="button_count" data-share="true"></div>
+              </div>
+            
+          </div>
+        
+
+        
+        </div>
+      
       
 
       
@@ -497,11 +535,11 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
-        </noscript>
+      <div class="fb-comments"
+           data-href="https://longfezhao.github.io/2019/12/19/%E5%85%B3%E9%94%AE%E8%B7%AF%E5%BE%84/"
+           data-numposts="10"
+           data-width="100%"
+           data-colorscheme="light">
       </div>
     </div>
 

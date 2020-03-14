@@ -77,6 +77,9 @@
 
 
 
+  <meta property="fb:admins" content="fffzlfk" />
+  <meta property="fb:app_id" content="660712791411997" />
+
 
 
 <meta name="description" content="题目描述给出一个包含n个整数的数组，你需要回答若干询问。每次询问两个整数k和v，输出从左到右第k个v的下标(数组从1～n编号)。 输入格式多组数据。每组数据第一行为n和m(1 &lt;&#x3D; n, m &lt;&#x3D; 100000)，第二行为n个整数(n不超过1e6)；以下m行每行为k和v。 输出格式对于每个查询，输出查询结果。若不存在，输出0。 代码实现1234567891011121314151617">
@@ -128,6 +131,24 @@
 
   <title>一道简单题 | LongFeZhao's Blog</title>
   
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '660712791411997',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/zh_Hans/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 
 
 
@@ -336,8 +357,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2019/09/22/%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E9%A2%98(Easy_Problem_from_Rujia_Liu?UVa_11991)/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2019/09/22/一道简单题(Easy_Problem_from_Rujia_Liu?UVa_11991)/" itemprop="commentCount"></span>
+                  <span class="post-comments-count fb-comments-count" data-href="https://longfezhao.github.io/2019/09/22/%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E9%A2%98(Easy_Problem_from_Rujia_Liu?UVa_11991)/" itemprop="commentCount">0</span> comments
                 </a>
               </span>
             
@@ -434,6 +454,24 @@
 
       
       
+        <div class="post-widgets">
+        
+
+        
+          <div class="social-like">
+            
+
+            
+              <div class="fb_like">
+                <div class="fb-like" data-layout="button_count" data-share="true"></div>
+              </div>
+            
+          </div>
+        
+
+        
+        </div>
+      
       
 
       
@@ -483,11 +521,11 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
-        </noscript>
+      <div class="fb-comments"
+           data-href="https://longfezhao.github.io/2019/09/22/%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E9%A2%98(Easy_Problem_from_Rujia_Liu?UVa_11991)/"
+           data-numposts="10"
+           data-width="100%"
+           data-colorscheme="light">
       </div>
     </div>
 

@@ -77,6 +77,9 @@
 
 
 
+  <meta property="fb:admins" content="fffzlfk" />
+  <meta property="fb:app_id" content="660712791411997" />
+
 
 
 <meta name="description" content="问题描述贝西（Bessie）在野外，想回到谷仓以尽可能多地睡觉，直到农夫约翰（John Farmer）叫醒她早上进行挤奶。贝西需要美睡，所以她想尽快回来。 农夫约翰的田地里有N（2 &lt;&#x3D; N &lt;&#x3D; 1000）个地标，唯一编号为1..N。地标1是谷仓；Bessie整日站立的苹果树丛是地标N。奶牛使用地标之间长度各异的T（1 &lt;&#x3D; T &lt;&#x3D; 2000）双向奶牛场在田间旅行。贝西">
@@ -129,6 +132,24 @@
 
   <title>POJ-2387-Til_the_Cows_Come_Home | LongFeZhao's Blog</title>
   
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '660712791411997',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/zh_Hans/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 
 
 
@@ -337,8 +358,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2019/11/22/Poj2387/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2019/11/22/Poj2387/" itemprop="commentCount"></span>
+                  <span class="post-comments-count fb-comments-count" data-href="https://longfezhao.github.io/2019/11/22/Poj2387/" itemprop="commentCount">0</span> comments
                 </a>
               </span>
             
@@ -439,6 +459,24 @@
 
       
       
+        <div class="post-widgets">
+        
+
+        
+          <div class="social-like">
+            
+
+            
+              <div class="fb_like">
+                <div class="fb-like" data-layout="button_count" data-share="true"></div>
+              </div>
+            
+          </div>
+        
+
+        
+        </div>
+      
       
 
       
@@ -488,11 +526,11 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
-        </noscript>
+      <div class="fb-comments"
+           data-href="https://longfezhao.github.io/2019/11/22/Poj2387/"
+           data-numposts="10"
+           data-width="100%"
+           data-colorscheme="light">
       </div>
     </div>
 

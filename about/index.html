@@ -77,6 +77,9 @@
 
 
 
+  <meta property="fb:admins" content="fffzlfk" />
+  <meta property="fb:app_id" content="660712791411997" />
+
 
 
 <meta name="description" content="冰冻三尺 非一日之寒             积土成山 非斯须之作               Hey，我是fffzlfk一名西电CS在读本科生          学习之余，我还是一个喜欢折腾的人          你可以在下面找到我                   GitHub                           WeChat">
@@ -131,6 +134,24 @@
 
   <title>About Me | LongFeZhao's Blog</title>
   
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '660712791411997',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/zh_Hans/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 
 
 
@@ -435,11 +456,11 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
-        </noscript>
+      <div class="fb-comments"
+           data-href="https://longfezhao.github.io/about/index.html"
+           data-numposts="10"
+           data-width="100%"
+           data-colorscheme="light">
       </div>
     </div>
 

@@ -77,6 +77,9 @@
 
 
 
+  <meta property="fb:admins" content="fffzlfk" />
+  <meta property="fb:app_id" content="660712791411997" />
+
 
 
 <meta name="description" content="简介链栈一般用一个头指针结构top来表示，它指向栈顶元素，对于链表来说，top结构相当于它的头指针head。 代码实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869#include &amp;lt">
@@ -130,6 +133,24 @@
 
   <title>链栈 | LongFeZhao's Blog</title>
   
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '660712791411997',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/zh_Hans/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 
 
 
@@ -338,8 +359,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2019/10/23/%E9%93%BE%E6%A0%88%E7%9A%84%E5%AE%9E%E7%8E%B0/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2019/10/23/链栈的实现/" itemprop="commentCount"></span>
+                  <span class="post-comments-count fb-comments-count" data-href="https://longfezhao.github.io/2019/10/23/%E9%93%BE%E6%A0%88%E7%9A%84%E5%AE%9E%E7%8E%B0/" itemprop="commentCount">0</span> comments
                 </a>
               </span>
             
@@ -436,6 +456,24 @@
 
       
       
+        <div class="post-widgets">
+        
+
+        
+          <div class="social-like">
+            
+
+            
+              <div class="fb_like">
+                <div class="fb-like" data-layout="button_count" data-share="true"></div>
+              </div>
+            
+          </div>
+        
+
+        
+        </div>
+      
       
 
       
@@ -485,11 +523,11 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
-        </noscript>
+      <div class="fb-comments"
+           data-href="https://longfezhao.github.io/2019/10/23/%E9%93%BE%E6%A0%88%E7%9A%84%E5%AE%9E%E7%8E%B0/"
+           data-numposts="10"
+           data-width="100%"
+           data-colorscheme="light">
       </div>
     </div>
 
